@@ -17,10 +17,7 @@
             ]
           },
           "columns": {
-            "type": [
-              "array",
-              "null"
-            ],
+            "type": ["array", "null"],
             "description": "Array of column definitions for table results. Each entry includes the column name and a concise explanation of its calculation or data source.",
             "items": {
               "type": "object",
@@ -36,17 +33,14 @@
                   "minLength": 1
                 },
                 "formula": {
-                  "type": [
-                    "string",
-                    "null"
-                  ],
+                  "type": ["string", "null"],
                   "description": "Markdown LaTeX formula describing the calculation if applicable (e.g., $\\text{Margin} = \\frac{Revenue - Cost}{Revenue}$). Use null when not applicable.",
                   "minLength": 1
                 },
                 "format": {
                   "type": "string",
-                  "description": "Frontend formatting hint (e.g., 'number', 'currency', 'percentage', 'date', 'datetime', 'string').",
-                  "minLength": 1
+                  "description": "Frontend formatting hint.",
+                  "enum": ["number", "currency", "percentage", "date", "datetime", "string"]
                 }
               },
               "required": [
@@ -59,34 +53,25 @@
             }
           },
           "top_5_rows": {
-            "type": [
-              "array",
-              "null"
-            ],
+            "type": ["array", "null"],
             "description": "Array of top 5 rows of the table result. Each row is an array of values in the same order as the 'columns' array (matching each column object's position).",
             "items": {
               "type": "array",
               "items": {
-                "type": [
-                  "string",
-                  "number",
-                  "boolean",
-                  "null"
-                ]
+                "type": ["string", "number", "boolean", "null"]
               }
-            }
+            },
+            "maxItems": 5
           },
           "value": {
-            "type": [
-              "string",
-              "null"
-            ],
+            "type": ["string", "null"],
             "description": "The text value, only applied for results of type 'text'.",
             "minLength": 1
           },
           "file_path": {
             "type": "string",
-            "description": "Filesystem path where the result was saved. Must be '/mnt/data/output.csv' for table or '/mnt/data/output.txt' for text. No other files should be created."
+            "description": "Filesystem path where the result was saved. Must be '/mnt/data/output.csv' for table or '/mnt/data/output.txt' for text. No other files should be created.",
+            "enum": ["/mnt/data/output.csv", "/mnt/data/output.txt"]
           }
         },
         "required": [

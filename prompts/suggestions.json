@@ -1,0 +1,17 @@
+[
+    {
+      "change": "Reframed 'Data Integrity & Granularity Check' into 'Mandatory Pre-computation Integrity Checks' and made the 'Time-Series Granularity Check' the first and most critical step.",
+      "justification": "I observed that the agent performed the crucial granularity check late in its process, after making several assumptions. This led it down a flawed path. The original prompt listed several checks, but their priority wasn't explicit enough. By making the time-series granularity check the explicit first step with a concrete code example (`.groupby(...).size()`), the agent is forced to confront the most common and critical data quality issue (mixed daily/monthly data) before any other action. This follows the prompt engineering principle of 'front-loading constraints' to guide the model effectively from the very beginning.",
+      "evidence": "The agent's reasoning chain shows it only discovered the true data sparseness and mixed granularity in steps `agent_reasoning_chain.md:523-579`, long after initial processing. The ground truth was impossible to achieve because of this fundamental data issue, which the agent should have identified and reported immediately as instructed by the prompt."
+    },
+    {
+      "change": "Strengthened the 'Averaging Rule' to require explicitly stating in the reasoning when data points are missing from an average calculation.",
+      "justification": "The agent correctly calculated an average over non-missing data, but it didn't clearly communicate the implication of this action—that the resulting averages were based on incomplete data, leading to NaNs. This change forces the agent to be more transparent about its handling of sparse data, improving the clarity and trustworthiness of its reasoning, even when the final result is incomplete. This aligns with the 'Clarity in Reasoning' guiding principle.",
+      "evidence": "The agent produced NaNs in its final output (`agent_reasoning_chain.md:512-517`) but only diagnosed the missing months much later. Requiring an upfront statement about missing data in the reasoning for the calculation itself would make the output more understandable."
+    },
+    {
+      "change": "Replaced the 'Final Sanity Check' and 'Check for Sparseness' with a single, stricter 'Final Answer Go/No-Go Gate'.",
+      "justification": "The most significant failure was the agent identifying illogical and sparse results but proceeding to output them as the final answer, directly violating the spirit of the original prompt. The 'Go/No-Go Gate' instruction uses stronger, more prescriptive language ('FORBIDDEN', 'MUST NOT', 'analysis is a failure report') to make it impossible for the agent to submit a confidently wrong answer. It explicitly tells the agent how to format a failure report (null result/filepath, explanation in reasoning). This transforms the check from a suggestion into a hard-coded operational gate, which is a robust method for improving agent reliability and safety.",
+      "evidence": "In `agent_reasoning_chain.md:582`, the agent notes the data issues will lead to NaNs and concludes 'but that’s acceptable', then outputs the flawed table. This is a direct contradiction of the `eval_ground_truth.md` and a critical failure of judgment. The new 'Go/No-Go Gate' is designed to prevent this specific failure mode by providing a clear protocol for what to do when the data quality is insufficient to produce a valid answer."
+    }
+  ]

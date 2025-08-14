@@ -1,0 +1,61 @@
+KPI Desejado,,"Nome das métricas na coluna ""Nome_KPI"" que compôem o KPI desejado",,
+,,Marca1,Marca2,Marca3
+,,Receita Antifraude,Receita Antifraude,Receita Antifraude
+,,Receita de adesão,Marca2,Receita de adesão
+,,Receita de Aluguel,Receita de Aluguel,Receita de Aluguel
+,,Receita de Franquias,Receita de Franquias,Receita de Franquias
+,,Receita de Garantia Chargeback,Receita de Garantia Chargeback,Receita de Garantia Chargeback
+,,Receita de Gateway,Receita de Gateway,Receita de Gateway
+,,Receita de Pix1,Receita de Pix1,Receita de Pix1
+Receita Adquirência,,Receita de Transferencia,Receita de Transferencia,Receita de Pix - Marca3
+,,Receita DIA,Receita DIA,Receita de Transferencia
+,,Receita invoice,Receita invoice,Receita DIA
+,,Receita nCof Franquias Visão Carteira,Receita nCof Franquias Visão Carteira,Receita invoice
+,,Receita nCof Partner Program,Receita nCof Partner Program,Receita nCof Franquias Visão Carteira
+,,Receita Onboarding Marca3,Receita Onboarding Marca3,Receita nCof Partner Program
+,,Receita POS White Label,Receita POS White Label,Receita Onboarding Marca3
+,,Receita RAV,Receita RAV,Receita POS White Label
+,,Receita Voucher,Receita Voucher,Receita RAV
+,,,,Receita Voucher
+,,,,
+,,,,
+,,Marca1,Marca2,Marca3
+,,Receita barcode celcoin,Receita barcode celcoin,Receita barcode celcoin
+,,Receita barcode cip,Receita barcode cip,Receita barcode cip
+,,Receita de BAAS,Receita de BAAS,Receita de Boleto
+,,Receita de bônus de superação VISA,Receita de bônus de superação VISA,Receita de BAAS
+,,Receita de crédito (cartão de crédito),Receita de crédito (cartão de crédito),Receita de bônus de superação VISA
+,,Receita de Floating - Cartão de Crédito,Receita de Floating - Cartão de Crédito,Receita de crédito (cartão de crédito)
+,,Receita de Floating - Cartão de débito,Receita de Floating - Cartão de débito,Receita de Floating - Cartão de Crédito
+,,Receita de Incentivo VISA,Receita de Incentivo VISA,Receita de Floating - Cartão de débito
+,,Receita de rebate VISA,Receita de rebate VISA,Receita de Incentivo VISA
+,,Receita de Saldo investido - Banking,Receita de Saldo investido - Banking,Receita de rebate VISA
+Receita Banking,,Receita floating conta,Receita floating conta,Receita de Saldo investido - Banking
+,,Receita Interchange cartão de crédito,Receita Interchange cartão de crédito,Receita floating conta
+,,Receita Interchange Cartão de Débito,Receita Interchange Cartão de Débito,Receita Interchange cartão de crédito
+,,Receita pix in static dynamic account,Receita pix in static dynamic account,Receita Interchange Cartão de Débito
+,,Receita recarga,Receita recarga,Receita pix in static dynamic account
+,,Receita saque,Receita saque,Receita recarga
+,,Receita saque - Cartão de Crédito,Receita saque - Cartão de Crédito,Receita saque
+,,Receita spread cartao internacional,Receita spread cartao internacional,Receita saque - Cartão de Crédito
+,,Receita ted out,Receita ted out,Receita spread cartao internacional
+,,Receita de Seguros de Vida,Receita de Seguros de Vida,Receita ted out
+,,Receita de Seguros PIX,Receita de Seguros PIX,Receita de Seguros de Vida
+,,Receita de Seguros Cartões,Receita de Seguros Cartões,Receita de Seguros PIX
+,,Receita de Seguros Prestamista,Receita de Seguros Prestamista,Receita de Seguros Cartões
+,,Receita de Outros Seguros MSMB,Receita de Outros Seguros MSMB,Receita de Seguros Prestamista
+,,Receita de Seguros de Loja,Receita de Seguros de Loja,Receita de Outros Seguros MSMB
+,,,,Receita de Seguros de Loja
+,,,,
+,,,,
+,,Marca1,Marca2,Marca3
+,,Receita de K-Giro - Automática,Receita de K-Giro - Automática,Receita de K-Giro - Automática
+,,Receita de K-Giro - Especializada,Receita de K-Giro - Especializada,Receita de K-Giro - Especializada
+Receita Crédito,,Receita de carteira high yield (Capital de giro),Receita de carteira high yield (Capital de giro),Receita de carteira high yield (Capital de giro)
+,,Receita bruta de rotativo (overdraft),Receita bruta de rotativo (overdraft),Receita bruta de rotativo (overdraft)
+,,Receita de Write-off (baixa de carteira),Receita de Write-off (baixa de carteira),Receita de Write-off (baixa de carteira)
+,,Receita de Desconto de duplicatas,Receita de Desconto de duplicatas,Receita de Desconto de duplicatas
+,,,,
+,,,,
+,,Marca1,Marca2,Marca3
+Base Ativa de Clientes,,Active client base ,Active client base ,Active client base 

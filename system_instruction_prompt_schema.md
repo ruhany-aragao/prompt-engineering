@@ -40,7 +40,7 @@
                 "format": {
                   "type": "string",
                   "description": "Frontend formatting hint.",
-                  "enum": ["number", "currency", "percentage", "date", "datetime", "string"]
+                  "enum": ["float", "integer", "currency", "percentage", "date", "datetime", "string"]
                 }
               },
               "required": [

@@ -34,7 +34,7 @@
                 },
                 "formula": {
                   "type": ["string", "null"],
-                  "description": "Markdown LaTeX formula describing the calculation if applicable (e.g., $\\text{Margin} = \\frac{Revenue - Cost}{Revenue}$). Use null when not applicable.",
+                  "description": "Markdown LaTeX formula describing the calculation if applicable (e.g., $$\\text{Margin} = \\frac{Revenue - Cost}{Revenue}$$). Always use display equation format with double dollar signs ($$). Use null when not applicable.",
                   "minLength": 1
                 },
                 "format": {
